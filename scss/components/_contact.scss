@@ -1,0 +1,48 @@
+.contact {
+	margin-bottom: 3em;
+	h2 {
+		clear: both;
+	}
+
+	.contact-info {
+		display: table;
+		@include desktop {
+			margin-bottom: 4em;
+		}
+		.contact-title {
+			display: table-cell;
+			min-width: 20%;
+			background-color: $contact-title-bg;
+			border-bottom: solid 1px white;
+			padding: 0.5em 0.7em;
+		}
+		.contact-content {
+			display: table-cell;
+			border-bottom: solid 1px $contact-title-bg;
+			padding: 0.5em 0.7em;
+		}
+	}
+
+	.google-map {
+		height: 200px;
+		margin-bottom: 2em;
+		@include tablet {
+			margin-bottom: 4em;
+			height: 450px;
+		}
+	}
+}
+.screen-reader-response{
+	display:none;
+}
+.wpcf7-not-valid-tip{
+	display:none;
+}
+.contact-form{
+	.input{
+		.wpcf7-not-valid{
+			border: 1px solid red !important;
+		}
+
+	}
+}

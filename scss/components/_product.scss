@@ -1,0 +1,114 @@
+.col-ts  {
+	@media (min-width: 580px) and (max-width: 768px) {
+		width: 50%;
+		float: left;
+	}
+}
+
+.products-list {
+	margin: 2em auto 4em;
+}
+
+.product-teaser {
+	position: relative;
+	@extend %border-radius;
+	border: 1px solid $border-color;
+	padding: 0.5em;
+	text-align: center;
+	background-color: white;
+	color: $body-font-color !important;
+	margin-bottom: 1.5em;
+	@include desktop {
+		margin-bottom: 2em;
+		font-size: 0.9em;
+	}
+	h3 {
+		position: relative;
+		margin-bottom: 1em;
+		font-size: 1.3em;
+	  @include desktop {
+	    font-size: 1.5em; 
+	  }
+		&:after {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 30%;
+			left: 35%;
+			padding-top: 1.6em;
+			border-bottom: 1px solid $gold;
+			margin: auto;
+		}
+	}
+	img {
+		width: 100%;
+		max-width: 500px;
+		height: auto;
+	}
+
+	p {
+		margin: 0.8em 0.8em 1.5em 0.8em;
+		padding-top: 0.8em;
+
+	}
+	&:hover {
+		.product-hover {
+			display: block;
+			opacity: 1;
+		  -webkit-transition: opacity 2s;
+		  -moz-transition: opacity 2s;
+		  -o-transition: opacity 2s;
+		  transition: opacity 2s;
+		}
+	}
+	.product-hover {
+		@extend %border-radius;
+	  position: absolute;
+	  color: white;
+	  text-align: center;
+	  height: 100%;
+	  width: 100%;
+	  left: 0;
+	  top: 0;
+	  padding: 3em;
+	  z-index: 2;
+	  display: none;
+	  opacity: 0;
+		.flex {
+	  	display: flex;
+    	display: -webkit-flex;
+	  	justify-content: center;
+	  	-webkit-justify-content: center;
+	  	height: 100%;
+
+		}
+	  .content {
+	  	align-self: center;
+	  	-webkit-align-self: center;
+	  	 h3 {
+		  	color: white;
+		  	line-height: 1.35em;
+		  	p {
+		  		margin: 0;
+		  	}
+		  	&:after {
+		  		display: none;
+		  	}
+		  }
+			.product-btn {
+				display: block;
+				padding: 0.7em;
+				margin: auto;
+				border: 1px solid white;
+				text-transform: uppercase;
+				&:hover {
+					background-color: white;
+					color: black;
+				}
+			}
+	  }
+	}
+	.bv-colour {
+		background-color: rgba(0,0,0,0.85);
+	}
+}

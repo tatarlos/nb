@@ -1,0 +1,72 @@
+/* EXPLORE RANGE LOGOS */
+.logos-box {
+	@extend %border-radius;
+	border: 1px solid $border-color;
+	padding: 1em;
+	text-align: center;
+	img {
+		padding: 0.2em 0.4em;
+		height: 53px;
+		width: auto;
+	}
+}
+
+
+/* FIND OUT MORE SECTION */
+.discover-more {
+	background: url('../img/bg-mountain.jpg') 100% no-repeat;
+	background-size: cover;
+	padding: 5em 0 6em;
+	margin: 5em 0 0;
+
+	h2 {
+		color: white;
+  	&:before, &:after {
+  		border-color: white;
+  	}
+	}
+
+	.col {
+		@media (max-width: 580px){
+			padding: 0 2%;
+		}
+	}
+
+	a {
+		color: $gold;
+		text-transform: uppercase;
+		font-size: 0.55em;
+		font-family: 'Optima', sans-serif;
+	  @include tablet-small {
+			font-size: 1em;
+	  }
+	  @include tablet {
+			font-size: 1.3em;
+	  }
+		&:hover {
+			color: $body-font-color;
+		}
+	}
+
+	.button {
+		@extend %border-radius;
+		padding: 1em;
+		text-align: center;
+		background-color: rgba(255,255,255, 0.7);
+		border: 2px solid $border-color;
+	  @include desktop {
+			padding: 2em;
+	  }
+		&:hover {
+			background-color: rgba(255,255,255, 1);
+		}
+		img {
+			display: block;
+			margin: auto;
+			width: 100%;
+			max-width: 125px;
+			height: auto;
+
+		}
+	}
+}

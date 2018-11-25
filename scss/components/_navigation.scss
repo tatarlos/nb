@@ -1,0 +1,170 @@
+nav {
+  width: 100%;
+  position: relative;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 2;
+    margin-top: 0.6em;
+    @include desktop {
+      margin-top: 0.8em;
+    }
+    @include desktop-large {
+      margin-top: 1.7em;
+    }
+    > li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      margin: 0 0.2em;
+      @include desktop {
+        margin: 0 0.4em;
+      }
+      padding-bottom: 1em;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        padding: 0.2em 0.4em;
+        font-size: 0.7em;
+        display: block;
+        font-family: 'Optima';
+        text-transform: uppercase;
+        color: $nav-link;
+        position: relative;
+        padding-bottom: 1em;
+        position: relative;
+        @include desktop {
+          padding: 0.2em 0.4em;
+          font-size: 0.9em;
+        }
+        &:hover {
+          color: $nav-link-hover;
+        }
+      }
+
+      &.dropdown a {
+        padding-right: 1em;
+        &:after {
+          content:"";
+          position: absolute;
+          right: 0;
+          margin-top: 0.5em;
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-top: 0.4em solid $nav-link;
+        }
+        &:hover {
+          &:after {
+            border-top-color: $nav-link-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* sub navigation */
+nav ul.menu li {
+  ul {    
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: $subnav-bg;
+    box-shadow: 0 1px 5px $dark-grey;
+    border-bottom: 0.3em solid $gold;
+    margin-top: -0.1em;
+    @include desktop {
+      margin-top: 0.4em;
+    }
+    &.sub-menu {
+      display: none;
+    }
+    li {
+      position: relative;
+      // display: block;
+      margin: 0;
+      padding: 0;
+      min-width: 8em;
+      text-align: center;
+      border-bottom: solid 1px rgba(255,255,255,0.3);
+      @include desktop {
+        min-width: 12em;
+      }
+      a {
+        display: block;
+        width: 100%;
+        padding: 0.7em 0.5em;
+        color: white;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 400;
+        font-size: 0.7em;
+        &:hover {
+          background-color: $subnav-hover-bg;
+          color: white;
+          border: 0;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &:last-child {
+        border: 0;
+        border-radius: 0 0 5px 5px;
+      }
+    }
+
+    // products submeny
+    &.products-menu {
+      min-width: 340px;
+      padding: 0.3em;
+      background-color: white;
+      text-align: left;
+      @include desktop {
+        min-width: 485px;
+        padding: 0.8em;
+      }
+      @include desktop-large {
+        min-width: 585px;
+      }
+      li.product-group {
+        display: inline-block;
+        color: $gold;
+        text-transform: uppercase;
+        min-width: auto;
+        margin: 0.3em 0.1em;
+        border-top: none;
+        @include desktop {
+          margin: 0.4em 0.2em;
+        }
+        a {
+          padding: 0;
+          font-size: 0.65em;
+          color: $gold;
+          &:hover {
+            color: white;
+          }
+        }
+        img {
+          max-width: 104px;
+          height: auto;
+          display: block;
+          border: 1px solid $light-grey;
+          @include desktop-large {
+            max-width: 105px;
+          }
+          &:hover {
+            border-color: $border-color;
+          }
+        }
+      }
+    }
+  }
+}

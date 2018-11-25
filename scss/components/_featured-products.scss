@@ -1,0 +1,20 @@
+.featured-products {
+	margin: 1.5em 0 0;
+  @include tablet {
+		margin: 3em 0 0;
+  }
+  .col-ts {
+	  &:last-child {
+	  	display: none;
+		  @include tablet {
+	  		display: block;
+		  }
+	  }
+  }
+}
+
+.pattern-bg {
+	background: url('../img/bg-feature.jpg');
+	border-top: 1px solid $light-grey;
+	border-bottom: 1px solid $light-grey;
+}

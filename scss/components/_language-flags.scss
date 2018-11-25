@@ -1,0 +1,23 @@
+.language-flags {
+	margin-top: 1.5em;
+	img {
+		max-width: 38px;
+		width: 100%;
+		height: auto;
+		display: inline-block;
+		margin-right: 0.2em;
+	}
+}
+
+.language-flags-mobile{
+ 	@media screen and (min-width: 991px) {
+  	display:none;
+  }
+	img{
+		max-width: 32px;
+		width: 100%;
+		height: auto;
+		display: inline-block;
+		margin-right: 0.2em;
+	}
+}

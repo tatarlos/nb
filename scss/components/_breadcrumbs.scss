@@ -1,0 +1,17 @@
+.breadcrumbs {
+	font-size: 0.6em;
+	margin: 1em auto;
+	text-transform: uppercase;
+	padding: 0 15px !important;
+	@include tablet {
+		font-size: 0.9em;
+	}
+	a {
+		color: $breadcrumbs-link;
+		text-decoration: underline;
+		&:hover {
+			color: $breadcrumbs-hover;
+			text-decoration: none;
+		}
+	}
+}

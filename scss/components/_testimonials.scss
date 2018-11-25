@@ -1,0 +1,25 @@
+.testimonials {
+	.grid {
+		.testimonial-item {
+			width: 100%;
+			margin-bottom: 2em;
+			@include tablet {
+				width: 44%;
+			}
+			.title {
+				font-size: 0.95em;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $testimonials-title;
+				text-align: right;
+			}
+			.content {
+				background-color: $light-grey;
+				padding: 1.2em;
+				font-size: 0.95em;
+				font-style: italic;
+				border-bottom: 1px solid $testimonials-title;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.ingredients-container {
+    overflow:hidden;
+    border: 1px solid $border-color;
+    border-radius:3px;
+    background: $ingredients-content-bg;
+    margin-bottom: 2em;
+}
+
+.ingredient {
+	.title {
+		width: 100%;
+	  padding: 0.5em 1em;
+	  display: inline-block;
+	  border-top: 1px solid $ingredients-content-bg;
+	  background: white;
+	  transition: all linear 0.15s;
+	  font-size: 1.2em;
+	  cursor: pointer;
+	  color: $main-title;
+	}
+
+	.content {
+		display: none;
+	  padding: 1em;
+	  overflow: auto;
+	  background-color: $ingredients-content-bg;
+	  img {
+	  	width: 100%;
+	  	height: auto;
+	  }
+	}
+
+	&:first-child {
+		.title {
+			border-top: none;
+		}
+	}
+
+	&.active {
+		.title {
+			background-color: $ingredients-content-bg;
+			font-weight: bold;
+		}
+	}
+}

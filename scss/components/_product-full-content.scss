@@ -1,0 +1,151 @@
+.product-full-content {
+	h1 {
+		text-align: left;
+		margin-bottom: 0.3em;
+		font-size: 1.9em;
+	}
+
+	.highlight-info {
+		width: 100%;
+		display: table;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 1.5em;
+		.feature-ingredients {
+			display: table-cell;
+			width: 88%;
+			background-color: $product-highlight-bg;
+			border-right: 3px solid white;
+			padding: 0.6em 0.8em;
+			font-weight: bold;
+		}
+		.volume {
+			display: table-cell;
+			width: 12%;
+			background-color: $product-highlight-bg;
+			padding: 0.6em 0.8em;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+
+	.description {
+		margin-bottom: 1em;
+	}
+
+
+	/* PRODUCT INFO TABS */
+	ul.product-tabs {
+		float: left;
+		list-style: none;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		margin-top: 2em;
+		border-bottom: 1px solid $product-tabs;
+		@include tablet-small {
+			height: 35px; 
+		}
+		li {
+			position: relative;
+			border-top: 1px solid white;
+			height: 50px; 
+			line-height: 50px; 
+			@include tablet-small {
+				border-left: 1px solid white;
+				border-bottom: none;
+				float: left;
+				height: 35px; 
+				line-height: 35px; 
+				overflow: hidden;
+			}
+			a {
+				display: block;
+				padding: 0 1em;
+				font-family: 'Optima';
+				font-size: 0.9em;
+				color: white;
+				background: $product-tabs;
+				text-decoration: none;
+				text-transform: uppercase;
+				@include tablet-small {
+					border-left: 1px solid white;
+				}
+				&:hover {
+					background: $green;
+					color: white;
+				}
+			}
+			&.active {
+				border: 1px solid $product-tabs;
+				border-bottom: none;
+				a {
+					background-color: $product-active-content;
+					color: $product-tabs;
+				}
+			}
+			&:first-child {
+				@include tablet-small {
+					border-left: none;
+				}
+				a {
+					border-color: $product-tabs;
+				}
+			}
+		}
+	}
+
+	.tabs-content-area {
+		position: relative;
+		overflow: auto;
+		clear: both;
+		float: left;
+		width: 100%;
+		border: 1px solid $product-tabs;
+		border-top: none;
+		background-color: $product-active-content;
+		margin-bottom: 3em;
+		.tab-content {
+			padding: 1em;
+			display: none;
+		}
+	}
+	 
+
+	// PRODUCT IMAGES
+	.product-image {
+		@include tablet-small {
+			padding-top: 2em;
+		}
+		img {
+			width: 100%;
+			max-width: 700px;
+			height: auto;
+		}
+
+		ul.product-thumbnails {
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			margin-bottom: 1em;
+			li {
+				display: inline-block;
+				margin: 0 0.1em;
+				@include tablet {
+					margin: 0 0.2em;
+				}
+				img {
+					width: 60px;
+					border: 1px solid $light-grey;
+					@include tablet {
+						width: 80px;
+					}
+					&:hover {
+						border-color: $border-color;
+					}
+				}
+			}
+		}
+	}
+}

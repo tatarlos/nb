@@ -1,0 +1,38 @@
+// VARIABLES 
+@import "variables/colors";
+@import "variables/media-queries";
+@import "variables/typography";
+
+
+// BASE STYLES 
+@import "components/elements";
+@import "components/typography";
+
+
+// MIXINS
+@import "mixins/border-radius";
+@import "mixins/contained";
+
+
+// COMPONENTS
+@import "components/about";
+@import "components/breadcrumbs";
+@import "components/contact";
+@import "components/distributors";
+@import "components/featured-products";
+@import "components/language-flags";
+@import "components/footer";
+@import "components/header";
+@import "components/homepage";
+@import "components/ingredient";
+@import "components/languages";
+@import "components/media";
+@import "components/news";
+@import "components/product";
+@import "components/product-full-content";
+@import "components/sliding-banner";
+@import "components/small-banner";
+@import "components/testimonials";
+@import "components/navigation";
+@import "components/mobile-nav";
+

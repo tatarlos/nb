@@ -1,0 +1,21 @@
+%contained {
+	width: 96%;
+	margin: auto;
+	@include desktop {
+		max-width: 1024;
+	}
+	@include desktop-large {
+		width: 100%;
+    max-width: 1250px;
+  }
+}
+
+.contained {
+	@extend %contained;
+}
+
+.container {
+	// @media (max-width: 580px){
+		padding: 0 !important;
+	// }
+}

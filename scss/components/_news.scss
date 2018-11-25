@@ -1,0 +1,52 @@
+.news {
+	margin-bottom: 4em;
+	.news-date {
+		font-size: 0.8em;
+		margin-bottom: 1em;
+	}
+
+	.article-teaser {
+		overflow: auto;
+		padding: 1em 0;
+		border-bottom: 1px solid $border-color;
+		text-align: center;
+		@include tablet {
+			text-align: left;
+		}
+		.teaser-image {
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 220px;
+			}
+		}
+		.teaser-content {
+			.news-link {
+				font-size: 1.3em;
+				font-weight: bold;
+				font-color: $green;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.full-article {
+		h3 {
+			text-align: left;
+			border-bottom: 1px solid $green;
+			font-size: 1.8em;
+			margin-bottom: 1em;
+		}
+		.right-float {
+			display: block;
+			margin: 0 auto 1.5em;
+			width: 100%;
+			max-width: 350px;
+			height: auto;
+			@include tablet-small {
+				margin: 0 0 1em 1em;
+				float: right;
+			}
+		}
+	}
+}

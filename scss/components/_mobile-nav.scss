@@ -1,0 +1,134 @@
+.mobile-nav {
+  display:inline-block;
+  width: 20%;
+  height:40px;
+  vertical-align: middle;
+  color: $gold;
+  font-size: 0.8em;
+  @include tablet-small {
+    font-size: 1em;
+  } 
+  @include tablet {
+    display: none;
+  } 
+  i {
+    margin-top: 0.5em;
+    font-size: 1.9em;
+    display:block;
+    line-height: 0.5em;
+    @include tablet-small {
+      margin-top: 0.35em;
+    } 
+  }
+  .menu-btn {
+    float:right;
+    cursor:pointer;
+  }
+  .menu-text {
+    font-size: 0.75em;
+    margin-top: -20px;
+  }
+
+  .mobile-menu {
+    display:none;
+    position:fixed;
+    top:0;
+    right: 0;
+    background-color: $mobile-nav-bg;
+    z-index:100;
+    height:100vh;
+    width: 75%;
+    max-width: 350px;
+    // padding: 2em;
+    box-shadow: -3px 0px 25px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    overflow: auto;
+
+    .close-btn {
+      // position: absolute;
+      display: block;
+      text-align: right;
+      cursor: pointer;
+      background-color: white;
+      // top: 0;
+      // right: 0;
+      .fa {
+        margin: 0;
+        padding: 0.7em 0.4em;
+        font-size: 1.7em;
+      }
+    }
+
+    ul.tabbed-menu {
+      position: relative;
+      margin: 0 2em;
+      padding: 0;
+      text-align: left;
+      .mobile-links{
+        font-size: 1.3em;
+      }
+      li {
+        list-style: none;
+        border-bottom: 1px dotted $nav-link;
+        a {
+          display: block;
+          padding: 1em;
+          text-transform: uppercase;
+          color: white;
+          font-size: 1em;
+          position: relative;
+          border-bottom: 1px solid white;
+          .fa {
+            position: absolute;
+            margin: 0 0 0 0.2em;
+            font-size: 1.8em;
+            right: 0.5em;
+            top: 0.6em;
+            -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+          }
+
+          &.open {
+            .fa {
+              margin-top: 1.15em;
+              -ms-transform: rotate(180deg); /* IE 9 */
+              -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+              transform: rotate(180deg); 
+            }
+          }
+        }
+        ul.sub-menu {
+          padding: 0;
+          display: none;
+          li {
+            a {
+              display: block;
+              color: $mobile-nav-bg;
+              text-transform: none;
+              font-weight: normal;
+              background-color: $mobile-submenu-bg;
+              border-bottom: 1px solid white;
+              padding: 0.6em 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.mobile-overlay{
+  position: fixed;
+  opacity: 0.7;
+  background-color: black;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:20;
+  height:100vh;
+  @include tablet {
+    display:none;
+  }
+}

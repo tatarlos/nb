@@ -1,0 +1,56 @@
+.about {
+	.story {
+		padding: 0;
+		margin-bottom: 3em;
+		.right-col-content {
+			text-align: center;
+			margin-bottom: 2em;
+			img {
+				width: 100%;
+				max-width: 300px;
+				height: auto;
+			}
+			figcaption {
+				font-size: 0.7em;
+			}
+		}
+
+		.logos-box {
+			display: none;
+
+			@include tablet {
+				display: block;
+			}
+
+			img {
+				width: 45%;
+				max-width: 125px;
+				height: auto;
+			}
+		}
+	}
+
+	.history {
+		display: table;
+		.table-row {
+			&:nth-child(2n+2) {
+				background-color: $history-bg;
+			}
+			.date {
+				display: table-cell;
+				width: 30%;
+				text-align: right;
+				padding: 0.7em;
+				color: $gold;
+				@include tablet {
+					padding: 0.7em 2em 0.7em 0.7em;
+				}
+			}
+
+			.history-content {
+				display: table-cell;
+				padding: 0.7em;
+			}
+		}
+	}
+}

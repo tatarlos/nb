@@ -1,0 +1,81 @@
+footer {
+	width: 100%;
+	background-color: $footer-bg;
+	border-bottom: 0.4em solid $border-color;
+	
+	font-size: 0.85em;
+	line-height: 2em;
+	color: white;
+	margin-bottom: 0.5em;
+	@include tablet {
+    padding:1em 0 2em;
+  }
+	@include desktop {
+    padding: 3em 0 3.5em;
+  }
+  .container{
+	  @include tablet {
+	    margin-bottom: 0;
+	  }
+	  .contact{
+	  	margin-bottom: 0;
+	  }
+  }
+
+	h3 {
+		color: white;
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+		padding-bottom: 0.6em;
+	}
+
+	a {
+		color: white !important;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li {
+			&.footer-indent {
+				text-indent: 1.2em;
+			}
+		}
+		&.product-ranges {
+			-moz-column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-gap: 1em;
+      -webkit-column-gap: 1em;
+		}
+		&.social-media {
+			margin: 1em 0 1em 1.2em;
+			li {
+				display: inline-block;
+				margin-right: 0.3em;
+			}
+		}
+	}
+
+	.contact {
+		text-align: center;
+		@include desktop {
+			text-align: left;
+		}
+	}
+}
+
+.copyright {	
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.25em;
+	margin: 0.8em auto 1.2em;
+	padding: 0 15px !important;
+	.designer-logo {
+		height: 18px;
+		width: auto;
+		margin: 0.8em 0 1.2em 0.3em
+	}
+}
